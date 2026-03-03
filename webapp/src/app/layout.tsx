@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "Generate AI videos entirely in the cloud. Script → Voice → Images → Video — zero local compute.",
   icons: {
     icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
