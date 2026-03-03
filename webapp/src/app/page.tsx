@@ -228,7 +228,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-[1.5fr_1fr] gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] gap-4">
                 <div>
                   <label className="form-label">Voice</label>
                   <select
