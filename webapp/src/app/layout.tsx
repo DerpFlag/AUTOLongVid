@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={jetbrainsMono.className}>
         <header className="app-header">
           <div className="app-header-inner">
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div className="header-logo-wrap">
               <Image
                 src="/logo.png"
                 alt="AUTOLongVid logo"
@@ -44,15 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="header-title-center">
               AUTOLongVid
             </div>
-            <span
-              className="header-credit"
-              style={{
-                fontSize: '0.75rem',
-                fontFamily: 'var(--font-heading), monospace',
-                color: 'var(--mutedForeground)',
-                letterSpacing: '0.1em',
-              }}
-            >
+            <span className="header-credit" style={{ fontFamily: 'var(--font-heading), monospace', color: 'var(--mutedForeground)' }}>
               Made by Anas Riaz
             </span>
           </div>

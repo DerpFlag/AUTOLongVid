@@ -191,10 +191,10 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-6 py-8">
-      <section className="glass-card cyber-chamfer mb-6 p-6">
+    <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-5 sm:py-8">
+      <section className="glass-card cyber-chamfer intro-section mb-5 sm:mb-6 p-5 sm:p-6">
         <h1
-          className="text-accent text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-3"
+          className="text-accent text-base sm:text-lg md:text-xl font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-3"
           style={{ fontFamily: 'var(--font-heading), monospace' }}
         >
           Automated Long Format Text to Video Pipeline
@@ -206,8 +206,8 @@ export default function Home() {
       </section>
       <div className="dashboard-grid">
         {/* Left: Form + Job list */}
-        <div className="flex flex-col gap-6">
-          <div className="glass-card cyber-chamfer animate-fade-in p-6">
+        <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="glass-card cyber-chamfer animate-fade-in p-5 sm:p-6">
             <h2
               className="form-label mb-5 text-accent uppercase tracking-[0.2em] cyber-glitch-subtle inline-block"
               style={{ fontFamily: 'var(--font-heading), monospace', fontSize: '1rem' }}
@@ -265,7 +265,7 @@ export default function Home() {
             </form>
           </div>
 
-          <div className="glass-card cyber-chamfer p-5">
+          <div className="glass-card cyber-chamfer p-5 sm:p-5">
             <h2
               className="form-label mb-4 uppercase tracking-[0.2em]"
               style={{ fontFamily: 'var(--font-heading), monospace', fontSize: '0.85rem' }}
@@ -308,7 +308,7 @@ export default function Home() {
         </div>
 
         {/* Right: Job detail */}
-        <div className="glass-card terminal cyber-chamfer animate-fade-in p-7 min-h-[600px]">
+        <div className="glass-card terminal cyber-chamfer animate-fade-in p-5 sm:p-7 min-h-[400px] sm:min-h-[600px]">
           {!selectedJob ? (
             <div className="flex flex-col items-center justify-center min-h-[500px] text-mutedForeground gap-6">
               <span className="text-5xl opacity-60" style={{ filter: 'drop-shadow(0 0 8px var(--accent))' }}>▶</span>

@@ -62,7 +62,7 @@
     background: var(--background);
     color: var(--foreground);
     min-height: 100vh;
-    padding-top: 64px; /* space for fixed header */
+    padding-top: 72px; /* space for fixed header - no overlap with first section */
     overflow-x: hidden;
     position: relative;
     letter-spacing: 0.02em;
@@ -471,67 +471,92 @@ select.input-field {
   border-color: var(--destructive);
 }
 
-/* Header */
+/* Header - fixed at top, single line on all screens */
+:root {
+  --header-height: 56px;
+}
+
 .app-header {
-  background: rgba(5, 5, 8, 0.95);
+  --header-height: 56px;
+  background: rgba(5, 5, 8, 0.98);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  padding: 14px 0;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
+  min-height: var(--header-height);
 }
 
 .app-header-inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  padding: 0 16px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
 }
 
-@media (max-width: 640px) {
-  .app-header-inner {
-    padding: 0 12px;
-    column-gap: 8px;
-    row-gap: 4px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-  }
-
-  .header-logo {
-    height: 32px;
-  }
-
-  .header-title-center {
-    grid-column: 1 / -1;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-  }
-
-  .header-credit {
-    font-size: 0.6rem !important;
-    letter-spacing: 0.12em !important;
-  }
+.header-logo-wrap {
+  flex-shrink: 0;
 }
 
 .header-logo {
   display: block;
-  height: 40px;
+  height: 36px;
   width: auto;
 }
 
 .header-title-center {
+  flex: 0 1 auto;
+  min-width: 0;
   text-align: center;
   font-family: 'Orbitron', 'Share Tech Mono', monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--mutedForeground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-credit {
+  flex-shrink: 0;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.08em !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    --header-height: 52px;
+    padding: 8px 0;
+  }
+
+  .app-header-inner {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .header-logo {
+    height: 28px;
+  }
+
+  .header-title-center {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header-credit {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.05em !important;
+  }
 }
 
 .logo-text {
@@ -544,17 +569,35 @@ select.input-field {
   text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
+/* Intro section - same visual weight as other cards on mobile */
+.intro-section {
+  min-height: 0;
+}
+
+@media (max-width: 640px) {
+  .intro-section {
+    min-height: 120px;
+  }
+}
+
 /* Dashboard grid */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 380px 1fr;
-  gap: 24px;
+  gap: 20px;
   align-items: start;
 }
 
 @media (max-width: 1024px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-grid {
+    gap: 16px;
   }
 }
 
