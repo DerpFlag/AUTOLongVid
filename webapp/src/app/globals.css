@@ -481,11 +481,29 @@ select.input-field {
   z-index: 50;
 }
 
+.app-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
 .header-logo {
   display: block;
   height: 40px;
   width: auto;
-  filter: drop-shadow(0 0 14px rgba(0, 255, 136, 0.7));
+}
+
+.header-title-center {
+  text-align: center;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mutedForeground);
 }
 
 .logo-text {

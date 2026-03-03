@@ -199,7 +199,7 @@ export default function Home() {
         >
           Automated Long Format Text to Video Pipeline
         </h1>
-        <p className="text-sm text-mutedForeground max-w-2xl leading-relaxed">
+        <p className="text-sm text-mutedForeground leading-relaxed">
           Convert long-form, text-based scripts into fully assembled AI videos — voice, visuals, and final render —
           with an automated, cloud-native pipeline tuned for desirable long-format storytelling.
         </p>

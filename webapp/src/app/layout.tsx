@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${orbitron.variable} ${jetbrainsMono.variable}`}>
       <body className={jetbrainsMono.className}>
         <header className="app-header">
-          <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div className="app-header-inner">
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <Image
                 src="/logo.png"
@@ -38,6 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 priority
                 className="header-logo"
               />
+            </div>
+            <div className="header-title-center">
+              AUTOLongVid
             </div>
             <span
               className="header-credit"
